@@ -14,10 +14,10 @@ import re
 # Insert the path to your chat log here:
 logPath = r"Pirate_on_Emerald_Ocean_chat_log.txt"
 purse = '\n\[\d\d:\d\d:\d\d\] Ye slash open the purse to find (\d*) pieces of eight!'
-time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+current_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 
 ## MAIN CODE
 with open(logPath, 'r') as file_in:
-    with open(logPath[:-4]+'purse_data' + '.csv', 'w') as file_out:
+    with open(logPath[:-4]+'purse_data_' + current_time + '.csv', 'w') as file_out:
         purseresults = re.findall(purse, file_in.read())
         write = csv.writer(file_out)
