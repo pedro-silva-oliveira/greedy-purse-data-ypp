@@ -18,6 +18,6 @@ current_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 
 ## MAIN CODE
 with open(logPath, 'r') as file_in:
-    with open(logPath[:-4]+'purse_data_' + current_time + '.csv', 'w') as file_out:
-        purseresults = re.findall(purse, file_in.read())
+    with open(logPath[:-4]+'purse_data_' + current_time + '.csv', 'w', newline='') as file_out:
+        purseresults = re.findall(purse.strip(), file_in.read())
         write = csv.writer(file_out)
