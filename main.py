@@ -12,7 +12,7 @@ import re
 
 ## GLOBAL VARIABLES
 # Insert the path to your chat log here:
-logPath = r"Pirate_on_Emerald_Ocean_chat_log.txt"
+logPath = r"C:\Users\Pedro\OneDrive\Documentos\Puzzle Pirates\Azariul_emerald_Chat_log"
 purse = r"\n\[\d\d:\d\d:\d\d\] Ye slash open the purse to find (\d*) pieces of eight!"
 current_time = time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime())
 
